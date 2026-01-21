@@ -1,0 +1,34 @@
+# Sources configuration
+sources:
+  hackernews:
+    enabled: true
+    url: "https://news.ycombinator.com"
+    delay_seconds: 2
+  github_trending:
+    enabled: true
+    url: "https://github.com/trending"
+    delay_seconds: 2
+  reddit:
+    enabled: true
+    subreddits:
+      - MachineLearning
+      - LocalLLaMA
+      - programming
+    delay_seconds: 5
+
+# Scraping schedule
+scraping:
+  interval_hours: 6
+  max_topics_per_source: 30
+
+# Saturation thresholds
+saturation:
+  low_threshold: 3
+  high_threshold: 10
+  window_hours: 24
+
+# LLM settings
+llm:
+  model: "llama3.2"
+  temperature: 0.7
+  max_tokens: 1000
